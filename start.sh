@@ -2,7 +2,7 @@
 
 clear
 
-#BASEDIR=$(dirname $0)
+BASEDIR=$(dirname $0)
 
 #What do you want to do?
 echo "Please select an action by entering number below."
@@ -41,6 +41,6 @@ if [ "$dir" = "2" ]; then
 fi
 
 if [ "$dir" = "3" ]; then
-./$BASEDIR/resources/add_site.sh
+./$BASEDIR/resources/add_user.sh
 fi
 

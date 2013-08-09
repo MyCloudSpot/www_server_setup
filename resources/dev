@@ -1,18 +1,16 @@
-#NameVirtualHost *:80
-
+#joshuagmartinez.com
 <VirtualHost *:80>
-ServerName localhost
-DocumentRoot /var/www/
+        ServerAdmin $user_email
+        DocumentRoot /home/jmartinez/www/joshuagmartinez.com
+        ServerName www.joshuagmartinez.com
+        ErrorLog /var/log/joshuagmartinez.com-error_log
+        TransferLog /var/log/joshuagmartinez.com-access_log
 </VirtualHost>
 
 <VirtualHost *:80>
-ServerName *.local
-ServerAlias *.local
-VirtualDocumentRoot /var/www/%1/web
-</VirtualHost>
-
-<VirtualHost *:80>
-ServerName *.drupal
-ServerAlias *.drupal    
-VirtualDocumentRoot /var/www/%1
+        ServerAdmin josh@joshuagmartinez.com
+        DocumentRoot /home/jmartinez/www/joshuagmartinez.com
+        ServerName joshuagmartinez.com
+        ErrorLog /var/log/joshuagmartinez.com-error_log
+        TransferLog /var/log/joshuagmartinez.com-access_log
 </VirtualHost>
