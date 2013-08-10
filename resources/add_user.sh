@@ -14,10 +14,16 @@ sudo usermod -s /bin/false $user_name
 sudo usermod -G sftponly $user_name
 
 #Making directory for www files and giving user ownership
-echo "Creating WWW directory for user files"
+echo "Creating WWW directory for domains"
 sudo mkdir /home/$user_name/www
 sudo chmod 755 /home/$user_name/www
 sudo chown $user_name:$user_name /home/$user_name/www
+
+#Creating log file directory
+echo "Creating log file directory"
+sudo mkdir /home/$user_name/www/logs
+sudo chmod 755 /home/$user_name/www/logs
+sudo chown $user_name:$user_name /home/$user_name/www/logs
 
 #Removing uneeded files in user home directory
 echo "Removing uneeded files in user home directory"
